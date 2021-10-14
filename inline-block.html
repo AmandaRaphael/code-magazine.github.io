@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block,In-line, and In-line block elements</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        
+        }
+        body{
+            background-image:url("img/vladstudio-library-wallpaper-5919cd763df78cf5fa3d7e27.jpg");
+        }
+        .center-container{
+            width:1000px;
+            margin: 0px auto;
+            background-color: rgb(231, 225, 206);
+            padding:20px;
+            height:1300px;
+        
+        }
+        table{
+            border:5px solid black;
+            padding:10px;
+        }
+        tr,th,td{
+            border: 1px solid black;
+            padding:5px;
+            font-weight:bold;
+        }
+        article {
+            display: inline-block;
+            width: 280px;
+            height: 230px;
+            border: 2px solid blue;
+            margin:10px;
+            padding:5px
+        }
+
+        section {
+            
+            width: 1200px;
+            height: 70px;
+            margin: 10px;
+
+        }
+
+       
+      
+        img{
+            border:10px solid brown;
+            margin:20px;
+            padding:10px;
+        }
+        h1{
+            text-decoration: underline red;
+            margin:20px;
+            padding:10px;
+            border-top: 10px solid rgb(71, 71, 16)
+        }
+    </style>
+</head>
+
+<body>
+    <nav><a href="./index.html" class="center-align clear-underline">🏠 Home</a></nav>
+    <div class="center-container"><table>
+        <h1>Block,Inline and Inline-block elements</h1>
+        
+        <thead>
+            <tr>
+                <th>Block level element</th>
+                <th>Inline element</th>
+                <th>Inline-block element</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Block level elements always starts on a new line</td>
+                <td>An inline element doesn’t require a new line to start. It can work within an existing line of
+                    content.
+                </td>
+                <td>Elements do not start on a new line.</td>
+            </tr>
+            <tr>
+                <td>Block level element can have customized margin and padding</td>
+                <td>Top & bottom margin can not be applied to inline elements (Unless they are converted to block level
+                    element via CSS)</td>
+                <td>Elements can have vertical and horizontal padding on all sides.</td>
+            </tr>
+            <tr>
+                <td>If the width is not manually set, A block level element always takes up full width of its
+                    container.f the height isn’t manually set, Block level element’s height is adjusted automatically to
+                    fit all the content and other elements within itself.</td>
+                <td>An Inline element just takes up the width and height it needs.</td>
+                <td>Elements accept width and height properties.</td>
+            </tr>
+            <tr>
+                <td>Block level element can contain other block level element or Inline-level element</td>
+                <td>Inline-level elements can only contain data or other inline level elements.</td>
+                <td>There will often be a small gap between inline-block elements.</td>
+            </tr>
+            <tr><td>examples:- h1-h6,p,div,nav,form,header,ul,ol,li</td>
+            <td>examples:-a,em,strong,span,img,input,button,code(its a tag used to display computer code)</td>
+            <td></td></tr>
+        </tbody>
+    </table>
+
+<img src="./img/zjm7L.png" alt="image that shows properties of inline, block level elements
+">
+
+    <section>
+        <h2>Example of display:inline-block with three articles</h2>
+        <article>
+            <h2>hi</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quo rerum sit eligendi omnis, fugit
+            quidem impedit facilis voluptatum pariatur earum alias culpa dolorum mollitia officiis dolore laborum totam
+            voluptates.
+            Voluptates doloremque rem minima maiores modi, molestias delectus rerum nulla. Dignissimos neque quisquam
+            nesciunt hic. Sequi corrupti officiis cum odit, magni veniam ut
+        </article>
+        <article>
+            <h2>hi</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quo rerum sit eligendi omnis, fugit
+            quidem impedit facilis voluptatum pariatur earum alias culpa dolorum mollitia officiis dolore laborum totam
+            voluptates.
+            Voluptates doloremque rem minima maiores modi, molestias delectus rerum nulla. Dignissimos neque quisquam
+            nesciunt hic. Sequi corrupti officiis cum odit, magni veniam ut
+        </article>
+        <article>
+            <h2>hi</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quo rerum sit eligendi omnis, fugit
+            quidem impedit facilis voluptatum pariatur earum alias culpa dolorum mollitia officiis dolore laborum totam
+            voluptates.
+            Voluptates doloremque rem minima maiores modi, molestias delectus rerum nulla. Dignissimos neque quisquam
+            nesciunt hic. Sequi corrupti officiis cum odit, magni veniam ut
+        </article>
+    </section></div>
+    
+
+</html>

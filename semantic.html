@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Semantic HTMl</title>
+</head>
+<style>
+    *
+
+    /* center the page */
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .top-header {
+        background-color: beige;
+    }
+
+    a:link {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+
+    article {
+        background-color: pink;
+        display: inline-block;
+        width: 300px;
+        margin: 20px;
+        padding: 30px;
+    }
+
+    main {
+        position: relative;
+    }
+
+    aside {
+        position: absolute;
+        bottom: 0px;
+        right: -40px;
+        background-color: yellow;
+        height: 100px;
+        width: 100px;
+    }
+
+    footer {
+        background-color: rgb(202, 238, 148);
+    }
+</style>
+
+<body>
+    <header class="top-header">
+        Its the header area with H1 and the nav links<strong>and its important to choose a relevant H1 (30 to 70
+            characters long)as it helps in SEO (this line is written with strong tag.)</strong>
+        <h1>This is the H1 element inside the header</h1>
+        <nav><a href="./index.html">Home</a>
+            <a href="./vscodeext.html">VS Code Extensions</a>
+            <a href="#">Link c</a>
+            <a href="#">Link d</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Section heading</h2>
+            <article>
+                This is the article
+                <header class="article-header">
+                    <h2>This is the header of the article</h2>
+                    <img src="./img/amanda.png" width="100" alt="amanda">
+                    <span>posted by Amanda</span>
+                    <p>click the like button if you want to know more</p>
+                    <button>👍 Like</button>
+                </header>
+                <p>I am a paragraph and I have used em in a sentence which introduces itself.<em>I am italic</em></p>
+            </article>
+            <article>
+                This is the article
+                <header class="article-header">
+                    <h2>This is the header of the article</h2>
+                    <img src="./img/amanda.png" width="100" alt="amanda">
+                    <span>posted by Amanda</span>
+                    <p>click the like button if you want to know more</p>
+                    <button>👍 Like</button>
+                </header>
+                <p>I am a paragraph and I have used em in a sentence which introduces itself.<em>I am italic</em></p>
+            </article>
+            <article>
+                This is the article
+                <header class="article-header">
+                    <h2>This is the header of the article</h2>
+                    <img src="./img/amanda.png" width="100" alt="amanda">
+                    <span>posted by Amanda</span>
+                    <p>click the like button if you want to know more</p>
+                    <button>👍 Like</button>
+                </header>
+                <p>I am a paragraph and I have used em in a sentence which introduces itself.<em>I am italic</em></p>
+            </article>
+
+        </section>
+        <!-- <article>
+            This is the article
+            <header class="article-header">
+                <h2>This is the header of the article</h2>
+                <img src="./img/amanda.png" width="100" alt="amanda">
+                <span>posted by Amanda</span>
+                <p>click the like button if you want to know more</p>
+                <button>👍 Like</button>
+            </header>
+    <p>I am a paragraph and I have used em in a sentence which introduces itself.<em>I am italic</em></p>
+        </article> -->
+        <aside>
+            <h3>Aside</h3>
+            <p>i am aside para</p>
+        </aside>
+    </main>
+
+    <footer>
+        <a href="./index.html">HOME</a><a href="./vscodeext.html"> VS code Extensions</a>
+        <p> Copyright &copy; 2021 by The Code Magazine.</p>
+    </footer>
+</body>
+
+</html>

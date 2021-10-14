@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        body {
+            background-color: rgb(235, 245, 222);
+            
+        }
+        main{
+            margin: 0 auto;
+        }
+
+        header {
+            display: grid;
+            height: 200px;
+            grid-template-areas: "C S S1 . ."". G R I D";
+            width: 60%;
+            margin: 0 auto;
+            padding:30px;
+        }
+
+        div {
+            text-align: center;
+            font-size: 100px;
+            border-radius: 10px;
+            ;
+        }
+
+        div:nth-child(1) {
+            grid-area: C;
+            background-color: rgb(182, 212, 154);
+
+        }
+
+        div:nth-child(2) {
+            grid-area: S;
+            background-color: rgb(125, 170, 82);
+        }
+
+        div:nth-child(3) {
+            grid-area: S1;
+            background-color: rgb(118, 189, 52);
+        }
+
+        div:nth-child(7) {
+            grid-area: G;
+            background-color: rgb(182, 212, 154);
+        }
+
+        div:nth-child(8) {
+            grid-area: R;
+            background-color: rgb(125, 170, 82);
+        }
+
+        div:nth-child(9) {
+            grid-area: I;
+            background-color: rgb(182, 212, 154);
+        }
+
+        div:nth-child(10) {
+            grid-area: D;
+            background-color: rgb(118, 189, 52);
+        }
+        .container{
+            display:grid;
+            grid-template-areas: "aside " ;
+        }
+
+        aside {
+            border: 2px solid greenyellow;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div>C</div>
+        <div>S</div>
+        <div>S</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>G</div>
+        <div>R</div>
+        <div>I</div>
+        <div>D</div>
+    </header>
+    <main>
+
+
+        <aside>
+            <h2>CSS GRID</h2>
+            <ul>
+                <li><a href="./indexgrid.html">Basic Grid Layout</a></li>
+                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS grid from CSS tricks</a></li>
+                <li><a href="https://gridbyexample.com/examples/example18/">CSS grid resources</a></li>
+                <li><a href="https://webmadewell.com/css-grid-basic-display-grid/">Inline-grid example.</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>Image gallery using CSS grid and media query</h2>
+        
+            <h3>Code for the gallery</h3>
+            <a href="https://codepen.io/AmandaRapahel/pen/WNEvbQz" target="_blank" >click here!</a>
+            
+        </section>
+    </main>
+
+</body>
+
+</html>

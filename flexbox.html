@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexible box</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(217, 243, 243);
+
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background-color: peachpuff;
+      border: 5px solid red;
+      /* to center the page */
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 250px;
+      /* margin-left:100px; */
+      text-decoration: underline red;
+    }
+
+    h2 {
+      font-size: 100px;
+    }
+
+    h2+p {
+      font-size: 30px;
+      /* margin:20px; */
+    }
+
+    img {
+      border: 5px solid slateblue;
+      align-self: center;
+    }
+
+    .el--1 {
+      background-color: blueviolet;
+    }
+
+    .el--2 {
+      background-color: orangered;
+    }
+
+    .el--3 {
+      background-color: green;
+      height: 150px;
+
+    }
+
+    .el--4 {
+      background-color: goldenrod;
+    }
+
+    .el--5 {
+      background-color: palevioletred;
+    }
+    .container {
+      /* STARTER */
+      font-family: sans-serif;
+      background-color: #ddd;
+      font-size: 32px;
+      margin: 40px;
+
+      /* FLEXBOX */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .el {
+      /*
+        DEFAULTS:
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        */
+
+
+
+
+      /* flex-grow: 1; */
+      /* flex-shrink: 0; */
+      /* flex-basis: 200px; */
+      flex: 1 0 200px;
+
+      /* One value, unitless number: flex-grow
+flex-basis is then equal to 0. */
+      flex: 2;
+
+      /* One value, width/height: flex-basis */
+      flex: 10em;
+      flex: 30%;
+      flex: min-content;
+
+      /* Two values: flex-grow | flex-basis */
+      flex: 1 30px;
+
+      /* Two values: flex-grow | flex-shrink */
+      flex: 2 2;
+
+      /* Three values: flex-grow | flex-shrink | flex-basis */
+      flex: 2 2 10%;
+
+    }
+
+    .el--1 {
+      align-self: flex-start;
+      /* order: 1; */
+      /* flex-grow: 5; */
+    }
+
+    .el--5 {
+      align-self: stretch;
+      order: 1;
+    }
+
+    .el--6 {
+      order: -1;
+    }
+
+    #content {
+      display: flex;
+
+      justify-content: space-around;
+      /* flex-flow: row wrap; it helps when number of el is increased*/
+      align-items: stretch;
+    }
+
+    .box {
+      flex-grow: 1;
+      border: 3px solid rgba(0, 0, 0, .2);
+    }
+
+    .box1 {
+      flex-grow: 2;
+      border: 3px solid rgba(0, 0, 0, .2);
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>Flexbox</h1>
+    <article>
+      <h2>What is Flexbox?</h2>
+      <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as
+        a method that could offer space distribution between items in an interface and powerful alignment capabilities.
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Learn More!</a>
+      </p>
+
+    </article>
+    <img src="img/css-flex-properties.png" alt="flexbox diagram" width="700px">
+    <img src="img/flex.property.png" alt="flexbox diagram" width="700px">
+    <img src="img/190618_flexbox_intro_004.png" alt="flexbox diagram" width="700px">
+    <article>
+      <h2>An example for flex-box</h2>
+      <div class="container">
+        <div class="el el--1">HTML</div>
+        <div class="el el--2">and</div>
+        <div class="el el--3">CSS</div>
+        <div class="el el--4">are</div>
+        <div class="el el--5">amazing</div>
+
+      </div>
+      <a href="https://codepen.io/AmandaRapahel/pen/PojxQxq">See code in codepen</a>
+      <h2>This is a Flex-Grow</h2>
+      <h3>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h3>
+      <div id="content">
+        <div class="box" style="background-color:red;">A</div>
+        <div class="box" style="background-color:lightblue;">B</div>
+        <div class="box" style="background-color:yellow;">C</div>
+        <div class="box1" style="background-color:brown;">D</div>
+        <div class="box1" style="background-color:lightgreen;">E</div>
+        <div class="box" style="background-color:brown;">F</div>
+      </div>
+      <h3> A Flex shrink and flex grow scenario</h3>
+      <div>
+        <li>The first item has flex: 1 1 20em (shorthand for flex-grow: 1, flex-shrink: 1, flex-basis: 20em)</li>
+        <li>The second item has flex: 2 2 20em (shorthand for flex-grow: 2, flex-shrink: 2, flex-basis: 20em)</li><br>
+        <p>Both flex items want to be 20em wide. Because of the flex-grow (first parameter), if the flex container is
+          larger than 40em, the 2nd child will take twice as much leftover space as the first child. But if the parent
+          element is less than 40em wide, then the 2nd child will have twice as much shaved off of it as the 1st child,
+          making it look smaller (because of the 2nd parameter, flex-shrink).</p>
+
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>
